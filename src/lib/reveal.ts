@@ -1,5 +1,7 @@
 // Entrate allo scroll robuste (regola 3 dell'agenzia):
-// - CSS fa l'animazione, l'IntersectionObserver aggiunge solo la classe .is-in
+// - CSS fa l'animazione, l'IntersectionObserver aggiunge solo l'attributo data-in
+//   (un attributo e non una classe: React riscrive className quando ridisegna un elemento,
+//   e una classe aggiunta da fuori verrebbe cancellata, facendo sparire il contenuto)
 // - il contenuto si nasconde solo se il JS è attivo (html.reveal-on), da 768px e senza movimento ridotto
 // - rete di sicurezza: dopo 2,5s tutto ciò che è già sopra la piega viene mostrato
 let io: IntersectionObserver | null = null
@@ -16,7 +18,7 @@ export function initReveal() {
     (entries) => {
       for (const e of entries) {
         if (e.isIntersecting) {
-          e.target.classList.add('is-in')
+          e.target.setAttribute('data-in', '')
           io?.unobserve(e.target)
         }
       }
@@ -29,12 +31,12 @@ export function initReveal() {
 /** da chiamare dopo ogni cambio pagina */
 export function scanReveal() {
   if (!io) return
-  const els = document.querySelectorAll<HTMLElement>('[data-reveal]:not(.is-in)')
+  const els = document.querySelectorAll<HTMLElement>('[data-reveal]:not([data-in])')
   els.forEach((el) => io!.observe(el))
   window.setTimeout(() => {
     const vh = window.innerHeight
-    document.querySelectorAll<HTMLElement>('[data-reveal]:not(.is-in)').forEach((el) => {
-      if (el.getBoundingClientRect().top < vh) el.classList.add('is-in')
+    document.querySelectorAll<HTMLElement>('[data-reveal]:not([data-in])').forEach((el) => {
+      if (el.getBoundingClientRect().top < vh) el.setAttribute('data-in', '')
     })
   }, 2500)
 }

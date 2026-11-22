@@ -26,7 +26,7 @@ export function Breadcrumb({ title }: { title: string }) {
 
 /**
  * Foto che si apre con una maschera quando entra in vista (modalità alta).
- * Usa lo stesso sistema CSS delle entrate (classe .is-in + rete di sicurezza): non può restare nascosta.
+ * Usa lo stesso sistema CSS delle entrate (attributo data-in + rete di sicurezza): non può restare nascosta.
  */
 export function MaskReveal({ children, className, from = 'bottom' }: { children: ReactNode; className?: string; from?: 'bottom' | 'left' }) {
   return (

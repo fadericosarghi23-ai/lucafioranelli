@@ -183,7 +183,7 @@
       transform 0.6s var(--ease-out-soft);
     transition-delay: var(--d, 0ms);
   }
-  html.reveal-on [data-reveal].is-in {
+  html.reveal-on [data-reveal][data-in] {
     opacity: 1;
     transform: none;
   }
@@ -202,7 +202,7 @@
   html.reveal-on [data-reveal='mask-left'] > * {
     clip-path: inset(0% 100% 0% 0%);
   }
-  html.reveal-on [data-reveal^='mask'].is-in > * {
+  html.reveal-on [data-reveal^='mask'][data-in] > * {
     clip-path: inset(0% 0% 0% 0%);
   }
 }
