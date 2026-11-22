@@ -40,11 +40,14 @@ async function newPage(v, reduced = false) {
   return p
 }
 
-async function scrollAll(p, h) {
+async function scrollAll(p, h, hover = false) {
   const total = await p.evaluate(() => document.documentElement.scrollHeight)
+  const vw = await p.evaluate(() => window.innerWidth)
   for (let y = 0; y < total; y += Math.round(h * 0.8)) {
     await p.evaluate((yy) => window.scrollTo(0, yy), y)
     await wait(90)
+    // su desktop il mouse attraversa lo schermo: scopre contenuti che spariscono al passaggio
+    if (hover) for (const fx of [0.15, 0.35, 0.55, 0.75, 0.9]) for (const fy of [0.3, 0.6, 0.85]) await p.mouse.move(Math.round(vw * fx), Math.round(h * fy))
   }
   await p.evaluate(() => window.scrollTo(0, document.documentElement.scrollHeight))
   await wait(500)
@@ -61,7 +64,7 @@ if (!ONLY_INTER) {
         p.__errors.length = 0
         const where = `${v.n}${reduced ? '/ridotto' : ''} ${route}`
         await p.goto(BASE + route, { waitUntil: 'networkidle0' })
-        await scrollAll(p, v.h)
+        await scrollAll(p, v.h, !v.mobile)
         const r = await p.evaluate((vw) => {
           const out = {}
           out.hscroll = document.documentElement.scrollWidth - window.innerWidth
@@ -213,6 +216,39 @@ const isVisible = (p, sel) => p.evaluate((s) => { const e = document.querySelect
   ;(await p.$('.hero-open')) ? bug('hero', 'apertura ripetuta alla seconda visita') : ok('hero: apertura solo alla prima visita')
   if (p.__errors.length) bug('hero', p.__errors.join(' | '))
   await p.__ctx.close()
+}
+
+// pannelli dei servizi in Home: restano visibili al passaggio del mouse (bug del 22/11)
+{
+  for (const v of [D, { n: 'desktop-1920', w: 1920, h: 1080 }]) {
+    const p = await newPage(v)
+    await p.goto(BASE + '/', { waitUntil: 'networkidle0' })
+    await p.evaluate(() => document.querySelector('a[href="/servizi/ospitalita"] img')?.closest('ul')?.scrollIntoView({ block: 'center' }))
+    await wait(1200)
+    const strip = (lis) => lis.filter((li) => li.querySelector('a[href^="/servizi/"] img') && !li.closest('footer') && !li.closest('header'))
+    const boxes = await p.$$eval('ul li[data-reveal]', (lis) =>
+      lis
+        .filter((li) => li.querySelector('a[href^="/servizi/"] img') && !li.closest('footer') && !li.closest('header'))
+        .map((li) => {
+          const b = li.getBoundingClientRect()
+          return [b.x + b.width / 2, b.y + b.height / 2]
+        }),
+    )
+    for (const [x, y] of boxes) {
+      await p.mouse.move(x, y)
+      await wait(250)
+    }
+    await p.mouse.move(5, 5)
+    await wait(700)
+    const ops = await p.$$eval('ul li[data-reveal]', (lis) =>
+      lis.filter((li) => li.querySelector('a[href^="/servizi/"] img') && !li.closest('footer') && !li.closest('header')).map((li) => +getComputedStyle(li).opacity),
+    )
+    void strip
+    ops.length === 4 && ops.every((o) => o > 0.95)
+      ? ok(`${v.n}: i 4 pannelli dei servizi restano visibili dopo il passaggio del mouse`)
+      : bug(`servizi Home ${v.n}`, `opacità dopo il passaggio: ${ops.join(', ')}`)
+    await p.__ctx.close()
+  }
 }
 
 // filtri progetti
