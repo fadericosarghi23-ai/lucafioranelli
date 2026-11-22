@@ -1,0 +1,63 @@
+{
+  "draft": true,
+  "siteName": "Studio di Architettura Fioranelli",
+  "baseUrl": "https://www.fioranelli.com",
+  "defaultImage": "/og.jpg",
+  "routes": {
+    "/": {
+      "title": "Architetto a Numana, Riviera del Conero | Studio Fioranelli",
+      "description": "Studio di Architettura Fioranelli a Numana (AN): ristrutturazioni di case e casali, centri storici, hotel, B&B e ristoranti sulla Riviera del Conero."
+    },
+    "/progetti": {
+      "title": "Progetti: case, hotel e casali sul Conero | Studio Fioranelli",
+      "description": "Progetti dello Studio Fioranelli tra Numana, Sirolo, Camerano, Loreto e Ancona: case private, centri storici, country house e hotel."
+    },
+    "/servizi": {
+      "title": "Servizi di architettura a Numana e sul Conero | Studio Fioranelli",
+      "description": "Ristrutturazioni, restauro di centri storici e casali, progetti per hotel, B&B e ristoranti, interni su misura. Studio di architettura a Numana."
+    },
+    "/servizi/ospitalita": {
+      "title": "Architetto per hotel, B&B e ristoranti a Numana | Studio Fioranelli",
+      "description": "Progettazione e ristrutturazione di hotel, B&B, bar, ristoranti e stabilimenti balneari sulla Riviera del Conero: Numana, Sirolo, Loreto."
+    },
+    "/servizi/centri-storici": {
+      "title": "Restauro di centri storici e casali sul Conero | Studio Fioranelli",
+      "description": "Ristrutturazione e consolidamento di case nei centri storici di Numana e Sirolo e recupero di casali di campagna. Studio di architettura a Numana."
+    },
+    "/servizi/case": {
+      "title": "Ristrutturazione casa a Numana e Ancona | Studio Fioranelli",
+      "description": "Ristrutturazioni, ampliamenti e recupero di sottotetti tra Numana, Sirolo e Ancona. Progetto su misura e direzione dei lavori."
+    },
+    "/servizi/interni": {
+      "title": "Interni e arredi su misura a Numana | Studio Fioranelli",
+      "description": "Progetto di interni: scale, librerie, bagni e arredi disegnati su misura. Studio di architettura a Numana, Riviera del Conero."
+    },
+    "/studio": {
+      "title": "Lo studio: architetti a Numana dal porto al Conero | Studio Fioranelli",
+      "description": "Lo Studio di Architettura Fioranelli in Via del Porto a Numana: chi siamo, come lavoriamo, cosa dicono i clienti."
+    },
+    "/contatti": {
+      "title": "Contatti: architetto a Numana, Via del Porto | Studio Fioranelli",
+      "description": "Raccontaci il tuo progetto: richiesta guidata in tre passi, telefono ed email dello Studio di Architettura Fioranelli a Numana (AN)."
+    },
+    "/privacy": {
+      "title": "Privacy | Studio Fioranelli",
+      "description": "Informativa sul trattamento dei dati personali del sito dello Studio di Architettura Fioranelli."
+    },
+    "/cookie": {
+      "title": "Cookie | Studio Fioranelli",
+      "description": "Informativa cookie: il sito non usa cookie di profilazione né strumenti di statistica."
+    },
+    "/progetti/casa-due-mari": { "title": "Casa Due Mari, Numana | Studio Fioranelli", "description": "Una casa su più livelli a Numana con soppalco vetrato e terrazza sulla baia. Progetto dello Studio di Architettura Fioranelli.", "image": "/img/p/8ad1979f0f3257e7-1600.webp" },
+    "/progetti/country-house-borgo-rosso": { "title": "Country House Borgo Rosso, Sirolo | Studio Fioranelli", "description": "Recupero di un casale di campagna a Sirolo trasformato in country house. Progetto dello Studio di Architettura Fioranelli.", "image": "/img/p/e40112010e456143-1600.webp" },
+    "/progetti/hotel-san-francesco": { "title": "Hotel San Francesco, Loreto | Studio Fioranelli", "description": "Trasformazione di un convento di Loreto in hotel a 4 stelle. Progetto dello Studio di Architettura Fioranelli.", "image": "/img/p/852192620e7b88f6-1600.webp" },
+    "/progetti/palazzo-ruschioni": { "title": "Palazzo Ruschioni, Camerano | Studio Fioranelli", "description": "Un palazzo storico di Camerano diventato boutique hotel. Progetto dello Studio di Architettura Fioranelli.", "image": "/img/p/b9e110430e456d7e-1600.webp" },
+    "/progetti/nilu-relais": { "title": "Nilu Relais, Sirolo | Studio Fioranelli", "description": "Camere con soffitti in legno e arredi su misura a Sirolo. Progetto dello Studio di Architettura Fioranelli.", "image": "/img/p/e7f104cb0e455aaa-1600.webp" },
+    "/progetti/giulia-camere": { "title": "Giulia Camere, centro storico di Numana | Studio Fioranelli", "description": "Ristrutturazione e consolidamento strutturale di una casa del centro storico di Numana. Progetto dello Studio Fioranelli.", "image": "/img/p/ef71d1a90e54dc95-1600.webp" },
+    "/progetti/casa-vacanze-g": { "title": "Casa Vacanze G., Numana | Studio Fioranelli", "description": "Ristrutturazione completa di una casa del centro storico di Numana. Progetto dello Studio di Architettura Fioranelli.", "image": "/img/p/3cd16ada0e7b8ce9-1600.webp" },
+    "/progetti/casa-del-fornaio": { "title": "Casa del fornaio, Numana | Studio Fioranelli", "description": "Facciate, scale esterne e balconi di una casa a Numana. Progetto dello Studio di Architettura Fioranelli.", "image": "/img/p/dfd169f30e54da0a-1600.webp" },
+    "/progetti/casa-l": { "title": "Casa L, Ancona | Studio Fioranelli", "description": "Ristrutturazione di un appartamento di 45 mq ad Ancona collegato al sottotetto. Progetto dello Studio di Architettura Fioranelli.", "image": "/img/p/b9d103e80e54db38-1600.webp" },
+    "/progetti/casa-al-mare": { "title": "Casa al mare, Riviera del Conero | Studio Fioranelli", "description": "Ampliamento e ristrutturazione di una casa con giardino. Progetto dello Studio di Architettura Fioranelli.", "image": "/img/p/7fb1e9610e54dba8-1600.webp" },
+    "/progetti/abitazione-privata-numana": { "title": "Scala in acciaio e legno, Numana | Studio Fioranelli", "description": "Scala interna con struttura in acciaio e rivestimento in legno in una casa di Numana. Studio di Architettura Fioranelli.", "image": "/img/p/a2d18d8e0e54daaf-1600.webp" }
+  }
+}
