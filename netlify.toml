@@ -1,0 +1,38 @@
+[build]
+  command = "npm ci && npm run build"
+  publish = "dist"
+
+[build.environment]
+  NODE_VERSION = "22"
+
+# Bozza speculativa: niente indicizzazione finché il sito non va online sul dominio del cliente.
+# Al lancio: togliere questo blocco e impostare "draft": false in src/content/seo.json.
+[[headers]]
+  for = "/*"
+  [headers.values]
+    X-Robots-Tag = "noindex, nofollow"
+    X-Content-Type-Options = "nosniff"
+    Referrer-Policy = "strict-origin-when-cross-origin"
+    Permissions-Policy = "camera=(), microphone=(), geolocation=()"
+
+[[headers]]
+  for = "/assets/*"
+  [headers.values]
+    Cache-Control = "public, max-age=31536000, immutable"
+
+[[headers]]
+  for = "/img/*"
+  [headers.values]
+    Cache-Control = "public, max-age=2592000"
+
+[[headers]]
+  for = "/*.html"
+  [headers.values]
+    Cache-Control = "public, max-age=0, must-revalidate"
+
+# Ogni rotta è pre-renderizzata come file: nessun catch-all, le rotte sconosciute ricevono 404.html con stato 404.
+# Barra finale coerente con i canonical
+[[redirects]]
+  from = "/index.html"
+  to = "/"
+  status = 301
