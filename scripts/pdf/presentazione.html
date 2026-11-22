@@ -1,0 +1,196 @@
+<!doctype html>
+<html lang="it">
+<head>
+<meta charset="utf-8">
+<title>Studio di Architettura Fioranelli · Il nuovo sito</title>
+<link rel="stylesheet" href="../../node_modules/@fontsource-variable/archivo/wdth.css">
+<link rel="stylesheet" href="../../node_modules/@fontsource-variable/newsreader/wght.css">
+<link rel="stylesheet" href="../../node_modules/@fontsource/ibm-plex-mono/latin-500.css">
+<style>
+  @page { size: A4; margin: 0; }
+  :root { --calce:#F6F3EE; --pietra:#E6E0D6; --sabbia:#CFC6B8; --grafite:#5E605B; --inchiostro:#1B1E1C; --coppo:#A6472A; --coppo-chiaro:#C9714F; --adriatico:#7F979A; }
+  * { box-sizing: border-box; margin: 0; padding: 0; }
+  html, body { background: var(--calce); color: var(--inchiostro); }
+  body { font-family: 'Newsreader Variable', Georgia, serif; font-size: 10.5pt; line-height: 1.5; -webkit-print-color-adjust: exact; print-color-adjust: exact; }
+  .page { width: 210mm; height: 297mm; position: relative; overflow: hidden; page-break-after: always; padding: 18mm 18mm 16mm; display: flex; flex-direction: column; }
+  .page:last-child { page-break-after: auto; }
+  .disp { font-family: 'Archivo Variable', sans-serif; font-stretch: 112%; font-weight: 600; letter-spacing: -0.02em; }
+  .label { font-family: 'IBM Plex Mono', monospace; font-weight: 500; font-size: 7pt; letter-spacing: .12em; text-transform: uppercase; }
+  .coppo { color: var(--coppo); }
+  .grafite { color: var(--grafite); }
+  h2 { font-family: 'Archivo Variable', sans-serif; font-stretch: 112%; font-weight: 600; font-size: 25pt; line-height: 1.02; letter-spacing: -0.02em; }
+  h3 { font-family: 'Archivo Variable', sans-serif; font-stretch: 106%; font-weight: 600; font-size: 11.5pt; line-height: 1.2; }
+  .head { display: flex; justify-content: space-between; align-items: baseline; border-top: 1px solid var(--inchiostro); padding-top: 3mm; margin-bottom: 7mm; }
+  .foot { margin-top: auto; display: flex; justify-content: space-between; border-top: 1px solid var(--pietra); padding-top: 3mm; }
+  img { display: block; max-width: 100%; }
+  .shot { border: 1px solid var(--pietra); background: #fff; }
+
+  /* copertina */
+  .cover { padding: 0; background: var(--inchiostro); color: var(--calce); }
+  .cover .photo { position: absolute; inset: 0 0 92mm 0; overflow: hidden; }
+  .cover .photo img { width: 100%; height: 100%; object-fit: cover; object-position: 50% 80%; }
+  .cover .band { position: absolute; left: 0; right: 0; bottom: 0; height: 92mm; background: var(--inchiostro); padding: 14mm 18mm 14mm; display: flex; flex-direction: column; }
+  .cover .pill { position: absolute; left: 18mm; top: 16mm; background: rgba(246,243,238,.96); color: var(--inchiostro); border-radius: 999px; padding: 2.2mm 4.5mm; }
+  .cover .sky { position: absolute; left: 0; right: 0; bottom: 92mm; height: 16mm; }
+
+  .wordmark { display: inline-flex; align-items: flex-end; font-family: 'Archivo Variable'; font-stretch: 118%; font-weight: 500; letter-spacing: .07em; line-height: 1; }
+  .wordmark svg { height: 1.12em; width: .88em; margin: 0 .02em -.22em; }
+
+  .grid2 { display: grid; grid-template-columns: 1fr 1fr; gap: 6mm; }
+  .grid3 { display: grid; grid-template-columns: repeat(3, 1fr); gap: 5mm; }
+  .sw { border: 1px solid var(--pietra); background: #fff; }
+  .sw div { height: 15mm; }
+  .sw p { padding: 2mm 2.5mm; font-family: 'IBM Plex Mono'; font-size: 6.5pt; line-height: 1.45; }
+  .sw b { font-family: 'Archivo Variable'; font-size: 8pt; display: block; }
+  .card { border: 1px solid var(--pietra); background: rgba(255,255,255,.6); padding: 4.5mm; }
+  .num { font-family: 'IBM Plex Mono'; font-size: 7pt; color: var(--coppo); letter-spacing: .1em; }
+  ul.plain { list-style: none; }
+  ul.plain li { padding: 2.6mm 0; border-bottom: 1px solid var(--pietra); display: grid; grid-template-columns: 9mm 1fr; gap: 3mm; }
+  ul.plain li:last-child { border-bottom: 0; }
+  .lead { font-size: 12.5pt; line-height: 1.45; }
+</style>
+</head>
+<body>
+
+<!-- 1. COPERTINA -->
+<section class="page cover">
+  <div class="photo"><img src="../../public/img/p/ab4174c40e456148-1920.webp" alt=""></div>
+  <span class="pill label">Country House Borgo Rosso · Sirolo</span>
+  <div class="band">
+    <span class="wordmark" style="font-size:30pt;color:var(--calce)">
+      <span>FIOR</span>
+      <svg viewBox="0 0 30 38" fill="none"><path d="M2 30 L15 3 L28 30" stroke="#F6F3EE" stroke-width="2.4" stroke-linecap="square"/><path d="M28 30 L28 37" stroke="#C9714F" stroke-width="2.4" stroke-linecap="square"/></svg>
+      <span>NELLI</span>
+    </span>
+    <p class="label" style="color:var(--sabbia);margin-top:3mm">Studio di architettura · Numana</p>
+    <h1 class="disp" style="font-size:31pt;line-height:1.02;margin-top:11mm;max-width:150mm">Il nuovo sito dello Studio di Architettura Fioranelli</h1>
+    <div style="margin-top:auto;display:flex;justify-content:space-between" class="label">
+      <span style="color:var(--sabbia)">Proposta a cura di Altalogik</span>
+      <span style="color:var(--sabbia)">Novembre 2026</span>
+    </div>
+  </div>
+</section>
+
+<!-- 2. IDENTITÀ -->
+<section class="page">
+  <div class="head"><span class="label coppo">01 · L’identità</span><span class="label grafite">Logo, tipografia, colori</span></div>
+  <h2 style="max-width:150mm">Il Suo marchio, reso più solido. E il Conero come segno.</h2>
+  <p class="lead grafite" style="margin-top:5mm;max-width:160mm">Non abbiamo inventato un’identità nuova: siamo partiti dal marchio che lo studio usa già, con la A disegnata come un tetto, e lo abbiamo ridisegnato perché si legga bene anche in piccolo.</p>
+
+  <div class="grid2" style="margin-top:8mm">
+    <div class="card" style="display:flex;flex-direction:column;justify-content:space-between;min-height:58mm">
+      <span class="label grafite">Il marchio</span>
+      <div>
+        <span class="wordmark" style="font-size:26pt">
+          <span>FIOR</span>
+          <svg viewBox="0 0 30 38" fill="none"><path d="M2 30 L15 3 L28 30" stroke="#1B1E1C" stroke-width="2.4" stroke-linecap="square"/><path d="M28 30 L28 37" stroke="#A6472A" stroke-width="2.4" stroke-linecap="square"/></svg>
+          <span>NELLI</span>
+        </span>
+        <p class="label grafite" style="margin-top:2.5mm">architettura · Numana</p>
+      </div>
+      <p style="font-size:9pt" class="grafite">La A senza traversa è una falda di tetto; la gamba destra scende come un muro, nel colore del coppo.</p>
+    </div>
+    <div class="card" style="background:var(--inchiostro);color:var(--calce);border-color:var(--inchiostro);display:flex;flex-direction:column;justify-content:space-between;min-height:58mm">
+      <span class="label" style="color:var(--sabbia)">Il segno ricorrente</span>
+      <svg viewBox="0 0 400 90" style="width:100%;height:auto"><path id="sky" d="" fill="none" stroke="#F6F3EE" stroke-width="1.6"/><line x1="0" x2="400" y1="89" y2="89" stroke="#7F979A" stroke-width="1.5"/></svg>
+      <p style="font-size:9pt;color:rgba(246,243,238,.8)">Il profilo della costa dal Passetto a Porto Recanati, disegnato con le quote reali del terreno: torna nel sito come fascia finale, mappa dei progetti e sezione dello studio.</p>
+    </div>
+  </div>
+
+  <div class="grid2" style="margin-top:6mm">
+    <div class="card">
+      <span class="label grafite">Tipografia</span>
+      <p class="disp" style="font-size:24pt;line-height:1;margin-top:3mm">Casa Due Mari</p>
+      <p style="font-size:11pt;margin-top:2mm">Testi in Newsreader, leggibili come in una rivista di architettura.</p>
+      <p class="label grafite" style="margin-top:2mm">Etichette tecniche · 43°30′N 13°37′E</p>
+      <p style="font-size:8pt;margin-top:3mm" class="grafite">Archivo per i titoli, Newsreader per i testi, IBM Plex Mono per le etichette.</p>
+    </div>
+    <div>
+      <span class="label grafite">Colori</span>
+      <div class="grid3" style="grid-template-columns:repeat(4,1fr);gap:2.5mm;margin-top:3mm">
+        <div class="sw"><div style="background:#F6F3EE"></div><p><b>Calce</b>fondo</p></div>
+        <div class="sw"><div style="background:#E6E0D6"></div><p><b>Pietra</b>sezioni</p></div>
+        <div class="sw"><div style="background:#5E605B"></div><p><b>Grafite</b>testo</p></div>
+        <div class="sw"><div style="background:#1B1E1C"></div><p><b>Inchiostro</b>titoli</p></div>
+        <div class="sw"><div style="background:#A6472A"></div><p><b>Coppo</b>accento</p></div>
+        <div class="sw"><div style="background:#CFC6B8"></div><p><b>Sabbia</b>dettagli</p></div>
+        <div class="sw"><div style="background:#7F979A"></div><p><b>Adriatico</b>mappe</p></div>
+        <div class="sw" style="display:flex;align-items:center;justify-content:center;padding:2mm"><svg viewBox="0 0 58 44" style="width:70%"><path d="M2 30 H56" stroke="#1B1E1C" stroke-width="2"/><path d="M17 6 H41 L29 30 Z" fill="none" stroke="#1B1E1C" stroke-width="2"/><path d="M29 6 H41 L29 30 Z" fill="#A6472A"/></svg></div>
+      </div>
+      <p style="font-size:8.5pt;margin-top:3mm" class="grafite">Fondo chiaro di calce e pietra, un solo accento: il rosso dei coppi dei tetti del borgo. Il simbolo di quota delle sezioni segna i passaggi del sito.</p>
+    </div>
+  </div>
+  <div class="foot label grafite"><span>Studio di Architettura Fioranelli</span><span>2 / 5</span></div>
+</section>
+
+<!-- 3. ESPERIENZA -->
+<section class="page">
+  <div class="head"><span class="label coppo">02 · L’esperienza</span><span class="label grafite">Come si presenta il sito</span></div>
+  <h2 style="max-width:160mm">Le Sue opere al centro, il territorio come filo.</h2>
+  <div style="display:grid;grid-template-columns:2.15fr 1fr;gap:5mm;margin-top:7mm">
+    <figure><img class="shot" src="../../screenshots/hero/1440-foto1.png" alt=""><figcaption style="font-size:8.5pt;margin-top:2mm" class="grafite"><b class="disp" style="font-size:9pt;color:var(--inchiostro)">La prima schermata.</b> Fotografie grandi dei Suoi lavori che si alternano, titolo deciso, all’apertura la foto si schiude dalla linea dell’orizzonte.</figcaption></figure>
+    <figure><img class="shot" src="../../screenshots/hero/375-foto2.png" alt="" style="height:96mm;width:auto;margin:auto"><figcaption style="font-size:8.5pt;margin-top:2mm" class="grafite">Su telefono la foto resta grande e il titolo è sempre leggibile.</figcaption></figure>
+  </div>
+  <div class="grid2" style="margin-top:5mm">
+    <figure><img class="shot" src="../../screenshots/momenti/home-costa.png" alt=""><figcaption style="font-size:8.5pt;margin-top:2mm" class="grafite"><b class="disp" style="font-size:9pt;color:var(--inchiostro)">I luoghi dei progetti.</b> Il profilo reale della costa si disegna scorrendo; toccando un paese compaiono i lavori fatti lì.</figcaption></figure>
+    <figure><img class="shot" src="../../screenshots/momenti/centri-storici-sezione.png" alt=""><figcaption style="font-size:8.5pt;margin-top:2mm" class="grafite"><b class="disp" style="font-size:9pt;color:var(--inchiostro)">Il lavoro che non si vede.</b> Nella pagina sui centri storici la casa si consolida strato per strato, con le Sue parole su Giulia Camere.</figcaption></figure>
+    <figure><img class="shot" src="../../screenshots/momenti/visore.png" alt=""><figcaption style="font-size:8.5pt;margin-top:2mm" class="grafite"><b class="disp" style="font-size:9pt;color:var(--inchiostro)">Ogni progetto, tutte le foto.</b> Undici progetti con la loro galleria, da sfogliare a schermo intero e ingrandire nel dettaglio.</figcaption></figure>
+    <figure><img class="shot" src="../../screenshots/momenti/contatti.png" alt=""><figcaption style="font-size:8.5pt;margin-top:2mm" class="grafite"><b class="disp" style="font-size:9pt;color:var(--inchiostro)">Una richiesta chiara.</b> Tre domande (che cosa, dove, quando) e Lei riceve contatti già ordinati.</figcaption></figure>
+  </div>
+  <div class="foot label grafite"><span>Studio di Architettura Fioranelli</span><span>3 / 5</span></div>
+</section>
+
+<!-- 4. COSA CAMBIA -->
+<section class="page">
+  <div class="head"><span class="label coppo">03 · Cosa cambia</span><span class="label grafite">Una presenza propria</span></div>
+  <h2 style="max-width:165mm">Oggi il Suo lavoro è sparso su altri portali. Con un sito proprio diventa un unico racconto.</h2>
+  <div style="display:grid;grid-template-columns:1fr 62mm;gap:8mm;margin-top:7mm">
+    <ul class="plain">
+      <li><span class="num">01</span><div><h3>Tutti i progetti in un posto solo</h3><p class="grafite">Casa Due Mari, Borgo Rosso, Hotel San Francesco, Palazzo Ruschioni e gli altri: oggi sono su Houzz, domani su un indirizzo che è Suo, con le gallerie complete.</p></div></li>
+      <li><span class="num">02</span><div><h3>Il Suo nome, non quello del portale</h3><p class="grafite">Su un portale accanto al Suo profilo compaiono altri studi. Sul Suo sito chi arriva vede solo il Suo lavoro, e La contatta direttamente.</p></div></li>
+      <li><span class="num">03</span><div><h3>Trovato da chi cerca sul Conero</h3><p class="grafite">Ogni pagina è scritta per chi cerca un architetto a Numana, Sirolo, Ancona o Loreto, per una casa, un casale o una struttura ricettiva.</p></div></li>
+      <li><span class="num">04</span><div><h3>Due pubblici, due porte</h3><p class="grafite">Chi ha una casa da ristrutturare e chi gestisce un hotel o un locale trovano ciascuno la propria pagina, con progetti e linguaggio adatti.</p></div></li>
+      <li><span class="num">05</span><div><h3>Un profilo da sistemare</h3><p class="grafite">Il profilo a Suo nome su un portale di architetti oggi mostra prodotti d’illuminazione di un’altra azienda. Le consigliamo di verificarlo: il sito diventa il punto di riferimento corretto.</p></div></li>
+      <li><span class="num">06</span><div><h3>Un indirizzo che ha già</h3><p class="grafite">Il dominio fioranelli.com, che usa per la posta, può ospitare il sito senza toccare la casella email.</p></div></li>
+    </ul>
+    <div style="display:flex;flex-direction:column;gap:4mm">
+      <img src="../../public/img/p/8ad1979f0f3257e7-960.webp" alt="" style="width:100%;height:46mm;object-fit:cover">
+      <img src="../../public/img/p/dfd169f30e54da0a-960.webp" alt="" style="width:100%;height:60mm;object-fit:cover">
+      <p style="font-size:8.5pt" class="grafite">“Al centro di ogni immagine scattata nei paesi in cui viviamo c’è sempre una nostra macchia di colore.” <span class="label" style="display:block;margin-top:1.5mm">Dalla presentazione dello studio</span></p>
+    </div>
+  </div>
+  <div class="foot label grafite"><span>Studio di Architettura Fioranelli</span><span>4 / 5</span></div>
+</section>
+
+<!-- 5. PERCHÉ ALTALOGIK E PROSSIMI PASSI -->
+<section class="page">
+  <div class="head"><span class="label coppo">04 · Perché Altalogik</span><span class="label grafite">E i prossimi passi</span></div>
+  <h2 style="max-width:160mm">Un sito costruito sul Suo materiale, non su un modello.</h2>
+  <div class="grid3" style="margin-top:7mm">
+    <div class="card"><p class="num">FATTO SU MISURA</p><h3 style="margin-top:2mm">Dalle Sue foto e parole</h3><p class="grafite" style="font-size:9.5pt;margin-top:2mm">Abbiamo raccolto i progetti e le descrizioni che lo studio ha già pubblicato, e il profilo del Conero dai dati altimetrici pubblici.</p></div>
+    <div class="card"><p class="num">VELOCE E CURATO</p><h3 style="margin-top:2mm">Pensato per il telefono</h3><p class="grafite" style="font-size:9.5pt;margin-top:2mm">Foto ottimizzate, pagine che si caricano in fretta e non saltano, animazioni che si fermano per chi le preferisce disattivate.</p></div>
+    <div class="card"><p class="num">SENZA PENSIERI</p><h3 style="margin-top:2mm">Ci occupiamo noi della tecnica</h3><p class="grafite" style="font-size:9.5pt;margin-top:2mm">Messa online, indirizzo, modulo contatti, informative privacy e cookie aggiornate a ciò che il sito usa davvero.</p></div>
+  </div>
+
+  <h3 style="margin-top:10mm;font-size:13pt">I prossimi passi</h3>
+  <ul class="plain" style="margin-top:3mm">
+    <li><span class="num">01</span><div><h3>Una conversazione sui testi</h3><p class="grafite">Rivediamo insieme titoli e descrizioni: oggi molti sono provvisori. Ci dica anche come presentare lo studio, Lei e l’architetto Luciano Fioranelli.</p></div></li>
+    <li><span class="num">02</span><div><h3>Le foto originali</h3><p class="grafite">Ci servono gli originali in alta risoluzione dei progetti, alcuni ritratti e l’ingresso dello studio in Via del Porto. Se ci sono foto del prima dei lavori, ancora meglio.</p></div></li>
+    <li><span class="num">03</span><div><h3>I dati da confermare</h3><p class="grafite">Indirizzo, telefoni, email, partita IVA, PEC, orari, e il permesso di citare le recensioni ricevute su Houzz.</p></div></li>
+    <li><span class="num">04</span><div><h3>Online su fioranelli.com</h3><p class="grafite">Dopo la Sua approvazione pubblichiamo il sito sul Suo dominio e Le mostriamo come ricevere le richieste.</p></div></li>
+  </ul>
+  <div style="margin-top:auto;display:flex;justify-content:space-between;align-items:flex-end;border-top:1px solid var(--inchiostro);padding-top:5mm">
+    <div>
+      <p class="label coppo">Altalogik</p>
+      <p class="disp" style="font-size:15pt;margin-top:1.5mm">Restiamo a disposizione per vederlo insieme.</p>
+    </div>
+    <span class="label grafite">5 / 5</span>
+  </div>
+</section>
+
+<script>
+  // profilo reale del Conero per il segno ricorrente (stessi dati del sito)
+  window.__SKY__ && document.getElementById('sky').setAttribute('d', window.__SKY__)
+</script>
+</body>
+</html>
